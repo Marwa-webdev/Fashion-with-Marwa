@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion with Marwa - Premium Fashion Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Fashion with Marwa</div>
+    <ul class="nav-links">
+      <li><a href="#" data-page="home">Home</a></li>
+      <li><a href="#" data-page="about">About</a></li>
+      <li><a href="#" data-page="products">Products</a></li>
+      <li><a href="#" data-page="customization">Customization</a></li>
+      <li><a href="#" data-page="contact">Contact</a></li>
+    </ul>
+    <div class="cart-icon" onclick="navigateTo('cart')">
+      🛒 <span class="cart-count">0</span>
+    </div>
+  </nav>
+
+  <!-- Home Page -->
+  <section id="home-page" class="hero">
+    <div class="hero-content">
+      <h1>Fashion with Marwa</h1>
+      <p>Discover the Latest Trends in Fashion & Style</p>
+      <button class="hero-btn" onclick="navigateTo('products')">Shop Now</button>
+    </div>
+  </section>
+
+ <!-- About Page -->
+  <section id="about-page" class="about-section">
+    <div class="about-header">
+      <h1>About Fashion with Marwa</h1>
+      <p class="about-tagline">Your Ultimate Style Destination</p>
+    </div>
+    <div class="about-content">
+      <div class="about-card">
+        <div class="card-icon">💎</div>
+        <h3>Premium Quality</h3>
+        <p>Handpicked items from top brands around the world</p>
+      </div>
+      <div class="about-card">
+        <div class="card-icon">🚀</div>
+        <h3>Fast Shipping</h3>
+        <p>Quick delivery to your doorstep worldwide</p>
+      </div>
+      <div class="about-card">
+        <div class="card-icon">✅</div>
+        <h3>100% Authentic</h3>
+        <p>Guaranteed original products with certificates</p>
+      </div>
+      <div class="about-card">
+        <div class="card-icon">❤</div>
+        <h3>Best Price</h3>
+        <p>Competitive pricing with exclusive discounts</p>
+      </div>
+    </div>
+    <div class="about-footer">
+      <p>Welcome to Fashion with Marwa - where style meets quality. We bring you the latest trends and timeless classics to express your unique personality.</p>
+      <button class="cta-btn" onclick="navigateTo('products')">Explore Collection</button>
+    </div>
+  </section>
+
+  <!-- Products Page -->
+  <section id="products-page" class="products-section hidden">
+    <div class="category-buttons">
+      <button class="category-btn active" data-category="all" onclick="filterByCategory('all')">All Products</button>
+      <button class="category-btn" data-category="shirts" onclick="filterByCategory('shirts')">Shirts</button>
+      <button class="category-btn" data-category="pants" onclick="filterByCategory('pants')">Pants</button>
+      <button class="category-btn" data-category="hoodie" onclick="filterByCategory('hoodie')">Hoodies</button>
+      <button class="category-btn" data-category="suits" onclick="filterByCategory('suits')">Suits</button>
+      <button class="category-btn" data-category="abayas" onclick="filterByCategory('abayas')">Abayas</button>
+      <button class="category-btn" data-category="accessories" onclick="filterByCategory('accessories')">Accessories</button>
+      <button class="category-btn" data-category="perfumes" onclick="filterByCategory('perfumes')">Perfumes</button>
+      <button class="category-btn" data-category="shoes" onclick="filterByCategory('shoes')">Shoes</button>
+      <button class="category-btn" data-category="makeup" onclick="filterByCategory('makeup')">Makeup</button>
+    </div>
+
+    <div class="products-grid"></div>
+
+
+  </section>
+
+  
+   <!-- Customization Page -->
+  <section id="customization-page" class="customization-section">
+    <h2>Design Your Own Piece</h2>
+    <div class="customization-items">
+      <button class="custom-item-btn" onclick="selectCustomItem('shirt')">👕 Shirt</button>
+      <button class="custom-item-btn" onclick="selectCustomItem('hoodie')">🧥 Hoodie</button>
+      <button class="custom-item-btn" onclick="selectCustomItem('pant')">👖 Pant</button>
+    </div>
+
+    <div class="customization-container hidden" id="customizationBox">
+      <div class="customization-preview">
+        <div class="preview-item" id="previewItem">👕</div>
+      </div>
+
+      <div class="customization-controls">
+        <h3 id="itemTitle">Shirt</h3>
+        
+        <div class="control-group">
+          <label>Color</label>
+          <div class="color-picker">
+            <button class="color-btn" style="background-color: white; border: 2px solid #ff1493;" onclick="changeColor('white', 'Shirt')" title="White"></button>
+            <button class="color-btn" style="background-color: black;" onclick="changeColor('black', 'Black')" title="Black"></button>
+            <button class="color-btn" style="background-color: red;" onclick="changeColor('red', 'Red')" title="Red"></button>
+            <button class="color-btn" style="background-color: blue;" onclick="changeColor('blue', 'Blue')" title="Blue"></button>
+            <button class="color-btn" style="background-color: #ff69b4;" onclick="changeColor('pink', 'Pink')" title="Pink"></button>
+            <button class="color-btn" style="background-color: gray;" onclick="changeColor('gray', 'Gray')" title="Gray"></button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label>Size</label>
+       <button class="size-btn" onclick="changeSize('XS', event)">XS</button>
+<button class="size-btn" onclick="changeSize('S', event)">S</button>
+<button class="size-btn" onclick="changeSize('M', event)">M</button>
+<button class="size-btn" onclick="changeSize('L', event)">L</button>
+<button class="size-btn" onclick="changeSize('XL', event)">XL</button>
+<button class="size-btn" onclick="changeSize('XXL', event)">XXL</button>
+
+        </div>
+
+        <div class="control-group">
+          <label>Text (Optional)</label>
+          <input type="text" id="customText" placeholder="Add text to your item" maxlength="15" oninput="updateCustomText()">
+        </div>
+
+        <div class="custom-price">
+          <span>Price: Rs. <span id="customPrice">1999</span></span>
+        </div>
+
+        <button class="add-custom-to-cart-btn" onclick="addCustomToCart()">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Page -->
+  <section id="contact-page" class="contact-section">
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      
+      <div class="contact-detail">
+        <div class="contact-icon">📧</div>
+        <div class="contact-text">
+          <h3>Email</h3>
+          <p>info@fashionwithmarwa.com</p>
+          <p>support@fashionwithmarwa.com</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-icon">📞</div>
+        <div class="contact-text">
+          <h3>Phone</h3>
+          <p>+966 50 123 4567</p>
+          <p>+966 50 765 4321</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-icon">📍</div>
+        <div class="contact-text">
+          <h3>Address</h3>
+          <p>123 Fashion Street</p>
+          <p>Riyadh, Saudi Arabia</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-icon">🕐</div>
+        <div class="contact-text">
+          <h3>Hours</h3>
+          <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+          <p>Saturday - Sunday: 10:00 AM - 5:00 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send us a Message</h2>
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Your Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+      </div>
+
+      <button class="submit-btn" onclick="submitContactForm()">Send Message</button>
+    </div>
+  </section>
+
+  <!-- Cart Page -->
+  <section id="cart-page" class="cart-section hidden">
+    <div class="cart-container">
+      <div class="cart-left">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total"><strong>Total: $<span id="total-price">0.00</span></strong></div>
+      </div>
+      <div class="cart-right">
+        <h2>Place Order</h2>
+        <form id="order-form">
+          <label for="order-name">Name</label>
+          <input type="text" id="order-name" required>
+          <label for="order-email">Email</label>
+          <input type="email" id="order-email" required>
+          <label for="order-address">Address</label>
+          <textarea id="order-address" rows="4" required></textarea>
+          <button type="submit">Place Order</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Shop Like Other Brands</h3>
+        <p>Discover premium fashion collections from around the world. Fashion with Marwa brings you the best styles and trends.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul class="footer-links">
+          <li><a href="#" onclick="filterByCategory('shirts'); navigateTo('products')">Shirts</a></li>
+          <li><a href="#" onclick="filterByCategory('pants'); navigateTo('products')">Pants</a></li>
+          <li><a href="#" onclick="filterByCategory('hoodie'); navigateTo('products')">Hoodies</a></li>
+          <li><a href="#" onclick="filterByCategory('suit'); navigateTo('products')">Suits</a></li>
+          <li><a href="#" onclick="filterByCategory('abaya'); navigateTo('products')">Abayas</a></li>
+          <li><a href="#" onclick="filterByCategory('accessories'); navigateTo('products')">Accessories</a></li>
+          <li><a href="#" onclick="filterByCategory('perfumes'); navigateTo('products')">Perfumes</a></li>
+          <li><a href="#" onclick="filterByCategory('shoes'); navigateTo('products')">Shoes</a></li>
+          <li><a href="#" onclick="filterByCategory('makeup'); navigateTo('products')">Makeup</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" class="social-icon">📘 Facebook</a>
+          <a href="#" class="social-icon">🐦 Twitter</a>
+          <a href="#" class="social-icon">📷 Instagram</a>
+          <a href="#" class="social-icon">▶️ YouTube</a>
+          <a href="#" class="social-icon">💼 LinkedIn</a>
+        </div>
+      </div>
+
+      
+    <div class="footer-bottom">
+      <p>&copy; 2025 Fashion with Marwa. All rights reserved.</p>
+      <h1 class="footer-brand">Fashion</h1>
+    </div>
+  </footer>
+<script>
+// Function to show a page and hide the others
+function navigateTo(page) {
+    // Hide all sections
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => sec.classList.add('hidden'));
+
+    // Show the target section
+    const target = document.getElementById(page + '-page');
+    if (target) target.classList.remove('hidden');
+
+    // Optional: highlight the active navbar link
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => link.classList.remove('active'));
+    const activeLink = document.querySelector(`.nav-links a[data-page="${page}"]`);
+    if (activeLink) activeLink.classList.add('active');
+}
+
+// Attach click events to navbar links
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // prevent default anchor jump
+        const page = this.dataset.page;
+        navigateTo(page);
+    });
+});
+
+// Show Home page by default
+navigateTo('home');
+</script>
+<script>
+// Products array with category, gender, image, price
+const products = [
+    {id:1, name:'Classic Shirt', category:'shirts', gender:'male', image: '👚' , price:24.99},
+    {id:2, name:'Elegant Blouse', category:'shirts', gender:'female', image:'👚', price:29.99},
+     {id:1, name:'Classic Shirt', category:'shirts', gender:'male', image:'👚', price:24.99},
+    {id:2, name:'Elegant Blouse', category:'shirts', gender:'female', image:'👚', price:29.99},
+     {id:1, name:'Classic Shirt', category:'shirts', gender:'male', image:'👚', price:24.99},
+    {id:2, name:'Elegant Blouse', category:'shirts', gender:'female', image:'👚', price:29.99},
+     {id:1, name:'Classic Shirt', category:'shirts', gender:'male', image:'👚', price:24.99},
+    {id:2, name:'Elegant Blouse', category:'shirts', gender:'female', image:'👚', price:29.99},
+     {id:1, name:'Classic Shirt', category:'shirts', gender:'male', image:'👚', price:24.99},
+    {id:2, name:'Elegant Blouse', category:'shirts', gender:'female', image:'👚', price:29.99},
+    {id:3, name:'Jeans', category:'pants', gender:'male', image:'👖', price:39.99},
+    {id:4, name:'Skirt', category:'pants', gender:'female', image:'🩳', price:34.99},
+     {id:3, name:'Jeans', category:'pants', gender:'male', image:'👖', price:39.99},
+    {id:4, name:'Skirt', category:'pants', gender:'female', image:'🩳', price:34.99},
+     {id:3, name:'Jeans', category:'pants', gender:'male', image:'👖', price:39.99},
+    {id:4, name:'Skirt', category:'pants', gender:'female', image:'🩳', price:34.99},
+     {id:3, name:'Jeans', category:'pants', gender:'male', image:'👖', price:39.99},
+    {id:4, name:'Skirt', category:'pants', gender:'female', image:'🩳', price:34.99},
+     {id:3, name:'Jeans', category:'pants', gender:'male', image:'👖', price:39.99},
+    {id:4, name:'Skirt', category:'pants', gender:'female', image:'🩳', price:34.99},
+    {id:5, name:'Hoodie Men', category:'hoodie', gender:'male', image:'🧥', price:54.99},
+    {id:6, name:'Hoodie Women', category:'hoodie', gender:'female', image:'🧥', price:49.99},
+     {id:5, name:'Hoodie Men', category:'hoodie', gender:'male', image:'🧥', price:54.99},
+    {id:6, name:'Hoodie Women', category:'hoodie', gender:'female', image:'🧥', price:49.99},
+     {id:5, name:'Hoodie Men', category:'hoodie', gender:'male', image:'🧥', price:54.99},
+    {id:6, name:'Hoodie Women', category:'hoodie', gender:'female', image:'🧥', price:49.99},
+     {id:5, name:'Hoodie Men', category:'hoodie', gender:'male', image:'🧥', price:54.99},
+    {id:6, name:'Hoodie Women', category:'hoodie', gender:'female', image:'🧥', price:49.99},
+     {id:5, name:'Hoodie Men', category:'hoodie', gender:'male', image:'🧥', price:54.99},
+    {id:6, name:'Hoodie Women', category:'hoodie', gender:'female', image:'🧥', price:49.99},
+    {id:7, name:'Classic Shirt', category:'suits', gender:'male', image:'🙍‍♂️', price:24.99},
+    {id:8, name:'Elegant Blouse', category:'suits', gender:'female', image:'🙍‍♀️', price:29.99},
+     {id:7, name:'Classic Shirt', category:'suits', gender:'male', image:'🙍‍♂️', price:24.99},
+    {id:8, name:'Elegant Blouse', category:'suits', gender:'female', image:'🙍‍♀️', price:29.99},
+     {id:7, name:'Classic Shirt', category:'suits', gender:'male', image:'🙍‍♂️', price:24.99},
+    {id:8, name:'Elegant Blouse', category:'suits', gender:'female', image:'🙍‍♀️', price:29.99},
+     {id:7, name:'Classic Shirt', category:'suits', gender:'male', image:'🙍‍♂️', price:24.99},
+    {id:8, name:'Elegant Blouse', category:'suits', gender:'female', image:'🙍‍♀️', price:29.99},
+     {id:7, name:'Classic Shirt', category:'suits', gender:'male', image:'🙍‍♂️', price:24.99},
+    {id:8, name:'Elegant Blouse', category:'suits', gender:'female', image:'🙍‍♀️', price:29.99},
+    {id:9, name:'Classic Shirt', category:'abayas', gender:'male', image:'🙍‍♂️', price:24.99},
+    {id:10, name:'Elegant Blouse', category:'abayas', gender:'female', image:'🙍‍♂️', price:29.99},
+     {id:9, name:'Classic Shirt', category:'abayas', gender:'male', image:'🙍‍♂️', price:24.99},
+    {id:10, name:'Elegant Blouse', category:'abayas', gender:'female', image:'🙍‍♂️', price:29.99},
+     {id:9, name:'Classic Shirt', category:'abayas', gender:'male', image:'🙍‍♂️', price:24.99},
+    {id:10, name:'Elegant Blouse', category:'abayas', gender:'female', image:'🙍‍♂️', price:29.99},
+     {id:9, name:'Classic Shirt', category:'abayas', gender:'male', image:'🙍‍♂️', price:24.99},
+    {id:10, name:'Elegant Blouse', category:'abayas', gender:'female', image:'🙍‍♂️', price:29.99},
+     {id:9, name:'Classic Shirt', category:'abayas', gender:'male', image:'🙍‍♂️', price:24.99},
+    {id:10, name:'Elegant Blouse', category:'abayas', gender:'female', image:'🙍‍♂️', price:29.99},
+    {id:11, name:'Classic Shirt', category:'accessories', gender:'male', image:'🙍‍♂️', price:24.99},
+    {id:12, name:'Elegant Blouse', category:'accessories', gender:'female', image:'🙍‍♂️', price:29.99},
+     {id:11, name:'Classic Shirt', category:'accessories', gender:'male', image:'🙍‍♂️', price:24.99},
+    {id:12, name:'Elegant Blouse', category:'accessories', gender:'female', image:'🙍‍♂️', price:29.99},
+     {id:11, name:'Classic Shirt', category:'accessories', gender:'male', image:'🙍‍♂️', price:24.99},
+    {id:12, name:'Elegant Blouse', category:'accessories', gender:'female', image:'🙍‍♂️', price:29.99},
+     {id:11, name:'Classic Shirt', category:'accessories', gender:'male', image:'🙍‍♂️', price:24.99},
+    {id:12, name:'Elegant Blouse', category:'accessories', gender:'female', image:'🙍‍♂️', price:29.99},
+     {id:11, name:'Classic Shirt', category:'accessories', gender:'male', image:'🙍‍♂️', price:24.99},
+    {id:12, name:'Elegant Blouse', category:'accessories', gender:'female', image:'🙍‍♂️', price:29.99},
+    {id:13, name:'Classic Shirt', category:'perfumes', gender:'male', image:'🧴', price:24.99},
+    {id:14, name:'Elegant Blouse', category:'perfumes', gender:'female', image:'🧴', price:29.99},
+    {id:13, name:'Classic Shirt', category:'perfumes', gender:'male', image:'🧴', price:24.99},
+    {id:14, name:'Elegant Blouse', category:'perfumes', gender:'female', image:'🧴', price:29.99},
+    {id:13, name:'Classic Shirt', category:'perfumes', gender:'male', image:'🧴', price:24.99},
+    {id:14, name:'Elegant Blouse', category:'perfumes', gender:'female', image:'🧴', price:29.99},
+    {id:13, name:'Classic Shirt', category:'perfumes', gender:'male', image:'🧴', price:24.99},
+    {id:14, name:'Elegant Blouse', category:'perfumes', gender:'female', image:'🧴', price:29.99},
+    {id:13, name:'Classic Shirt', category:'perfumes', gender:'male', image:'🧴', price:24.99},
+    {id:14, name:'Elegant Blouse', category:'perfumes', gender:'female', image:'🧴', price:29.99},
+    {id:15, name:'Men Perfume', category:'shoes', gender:'male', image:'🧴', price:59.99},
+    {id:16, name:'Women Perfume', category:'shoes', gender:'female', image:'🧴', price:64.99},
+    {id:15, name:'Men Perfume', category:'shoes', gender:'male', image:'🧴', price:59.99},
+    {id:16, name:'Women Perfume', category:'shoes', gender:'female', image:'🧴', price:64.99},
+    {id:15, name:'Men Perfume', category:'shoes', gender:'male', image:'🧴', price:59.99},
+    {id:16, name:'Women Perfume', category:'shoes', gender:'female', image:'🧴', price:64.99},
+    {id:15, name:'Men Perfume', category:'shoes', gender:'male', image:'🧴', price:59.99},
+    {id:16, name:'Women Perfume', category:'shoes', gender:'female', image:'🧴', price:64.99},
+    {id:15, name:'Men Perfume', category:'shoes', gender:'male', image:'🧴', price:59.99},
+    {id:16, name:'Women Perfume', category:'shoes', gender:'female', image:'🧴', price:64.99},
+    {id:17, name:'Watch Men', category:'makeup', gender:'male', image:'⌚', price:89.99},
+    {id:18, name:'Necklace', category:'makeup', gender:'female', image:'💍', price:79.99},
+     {id:17, name:'Watch Men', category:'makeup', gender:'male', image:'⌚', price:89.99},
+    {id:18, name:'Necklace', category:'makeup', gender:'female', image:'💍', price:79.99},
+     {id:17, name:'Watch Men', category:'makeup', gender:'male', image:'⌚', price:89.99},
+    {id:18, name:'Necklace', category:'makeup', gender:'female', image:'💍', price:79.99},
+     {id:17, name:'Watch Men', category:'makeup', gender:'male', image:'⌚', price:89.99},
+    {id:18, name:'Necklace', category:'makeup', gender:'female', image:'💍', price:79.99},
+     {id:17, name:'Watch Men', category:'makeup', gender:'male', image:'⌚', price:89.99},
+    {id:18, name:'Necklace', category:'makeup', gender:'female', image:'💍', price:79.99},
+    // Add all other products here
+];
+
+// Cart array
+let cart = [];
+
+// Render products in two columns
+function renderProductsByGender(items) {
+    const grid = document.querySelector('.products-grid');
+    if (!items || items.length === 0) {
+        grid.innerHTML = '<p>No products found.</p>';
+        return;
+    }
+
+    grid.innerHTML = `
+      <div class="gender-column">
+        <h2>Women</h2>
+        <div class="gender-products">
+          ${items.filter(p => p.gender === 'female').map(p => `
+            <div class="product-item">
+              <div class="product-image">${p.image}</div>
+              <div class="product-info">
+                <h3>${p.name}</h3>
+                <p>$${p.price.toFixed(2)}</p>
+                <button onclick="addToCart(${p.id})">Add to Cart</button>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+      <div class="gender-column">
+        <h2>Men</h2>
+        <div class="gender-products">
+          ${items.filter(p => p.gender === 'male').map(p => `
+            <div class="product-item">
+              <div class="product-image">${p.image}</div>
+              <div class="product-info">
+                <h3>${p.name}</h3>
+                <p>$${p.price.toFixed(2)}</p>
+                <button onclick="addToCart(${p.id})">Add to Cart</button>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+}
+
+// Filter by category
+function filterByCategory(category) {
+    const filtered = category === 'all' ? products : products.filter(p => p.category === category);
+    renderProductsByGender(filtered);
+
+    // Highlight active category button
+    document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+    const activeBtn = document.querySelector(`.category-btn[data-category="${category}"]`);
+    if (activeBtn) activeBtn.classList.add('active');
+
+    navigateTo('products');
+}
+
+// Add to Cart function
+function addToCart(productId) {
+    const product = products.find(p => p.id === productId);
+    if (!product) return;
+    // Check if product already in cart
+    const existing = cart.find(item => item.id === productId);
+    if (existing) {
+        existing.quantity += 1;
+    } else {
+        cart.push({...product, quantity: 1});
+    }
+
+    // Update cart count
+    document.querySelector('.cart-count').innerText = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+    // Render cart section
+    renderCart();
+
+    alert(`${product.name} added to cart!`);
+}
+
+// Example renderCart function
+function renderCart() {
+    const cartItems = document.getElementById('cart-items');
+    if (!cartItems) return;
+
+    if (cart.length === 0) {
+        cartItems.innerHTML = '<p>Your cart is empty!</p>';
+        return;
+    }
+
+    let html = '';
+    cart.forEach(item => {
+        html += `
+            <div class="cart-item">
+                <div class="cart-item-image"><img src="${item.image}" alt="${item.name}"></div>
+                <div class="cart-item-details">
+                    <p>${item.name} x${item.quantity}</p>
+                    <p>Rs. ${(item.price * item.quantity).toFixed(2)}</p>
+                </div>
+                <button onclick="removeFromCart(${item.id})">Remove</button>
+            </div>
+        `;
+    });
+
+    cartItems.innerHTML = html;
+}
+
+// Customization preview
+function selectCustomItem(itemType) {
+    const box = document.getElementById('customizationBox');
+    box.classList.remove('hidden');
+
+    const preview = document.getElementById('previewItem');
+    preview.innerText = itemType === 'hoodie' ? '🧥' : itemType === 'shirt' ? '👕' : '👖';
+
+    document.getElementById('itemTitle').innerText = itemType.charAt(0).toUpperCase() + itemType.slice(1);
+
+    // Reset color, size, text, price
+    document.getElementById('customText').value = '';
+    document.getElementById('customPrice').innerText = 1999;
+}
+
+// Navigation
+function navigateTo(page) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => sec.classList.add('hidden'));
+
+    const target = document.getElementById(page + '-page');
+    if (target) target.classList.remove('hidden');
+
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => link.classList.remove('active'));
+    const activeLink = document.querySelector(`.nav-links a[data-page="${page}"]`);
+    if (activeLink) activeLink.classList.add('active');
+}
+
+// Initialize
+navigateTo('home');
+renderProductsByGender(products); // show all products by default
+// Variables to store selected options
+let selectedItem = 'shirt';
+let selectedColor = 'white';
+let selectedSize = 'M';
+let customText = '';
+let price = 1999;
+
+// Functions to handle selections
+function selectCustomItem(item) {
+    selectedItem = item;
+    document.getElementById('customizationBox').classList.remove('hidden');
+    document.getElementById('itemTitle').innerText = item.charAt(0).toUpperCase() + item.slice(1);
+    document.getElementById('previewItem').innerText = item === 'shirt' ? '👕' : item === 'hoodie' ? '🧥' : '👖';
+}
+
+function changeColor(color) {
+    selectedColor = color;
+    document.getElementById('previewItem').style.backgroundColor = color;
+}
+
+function changeSize(size, event) {
+    selectedSize = size;
+    // Remove active class from all size buttons
+    document.querySelectorAll('.size-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+}
+
+function updateCustomText() {
+    customText = document.getElementById('customText').value;
+    document.getElementById('previewItem').innerText = customText || document.getElementById('itemTitle').innerText === 'Shirt' ? '👕' : '🧥';
+}
+
+// Add to Cart function
+function addCustomToCart() {
+    const product = {
+        name: selectedItem,
+        color: selectedColor,
+        size: selectedSize,
+        text: customText,
+        price: price
+    };
+
+    // Get existing cart from localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert('Product added to cart!');
+    console.log('Cart:', cart);
+}
+
+</script>
+
+</body>
+</html>
