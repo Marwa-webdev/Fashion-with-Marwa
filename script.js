@@ -1,23 +1,33 @@
 // -------------------- Products Data --------------------
 const products = [
   // Shirts
-  {id:1, name:'Classic Shirt', category:'shirts', gender:'male', image:'sg1.jpg', price:24.99},
-  {id:2, name:'Elegant Blouse', category:'shirts', gender:'female', image:'images/blouse1.jpg', price:29.99},
-  {id:3, name:'Casual Tee', category:'shirts', gender:'male', image:'images/shirt2.jpg', price:19.99},
-  {id:4, name:'Summer Top', category:'shirts', gender:'female', image:'images/blouse2.jpg', price:22.99},
+  {id:1, name:'Classic Shirt', category:'shirts', gender:'male', image:'sb1.jpg', price:24.99},
+  {id:2, name:'Elegant Blouse', category:'shirts', gender:'female', image:'sg1.jpg', price:29.99},
+  {id:3, name:'Casual Tee', category:'shirts', gender:'male', image:'sb2.jpg', price:19.99},
+  {id:4, name:'Summer Top', category:'shirts', gender:'female', image:'sg2.jpg', price:22.99},
+   {id:3, name:'Casual Tee', category:'shirts', gender:'male', image:'sb3.jpg', price:19.99},
+  {id:4, name:'Summer Top', category:'shirts', gender:'female', image:'sg3.jpg', price:22.99},
   // Pants
-  {id:5, name:'Jeans', category:'pants', gender:'male', image:'images/jeans1.jpg', price:39.99},
-  {id:6, name:'Skirt', category:'pants', gender:'female', image:'images/skirt1.jpg', price:34.99},
+  {id:5, name:'Jeans', category:'pants', gender:'male', image:'pb1.jpg', price:39.99},
+  {id:6, name:'Skirt', category:'pants', gender:'female', image:'pw1.jpg', price:34.99},
+  {id:5, name:'Jeans', category:'pants', gender:'male', image:'pb2.jpg', price:39.99},
+  {id:6, name:'Skirt', category:'pants', gender:'female', image:'pw2.jpg', price:34.99},
+  {id:5, name:'Jeans', category:'pants', gender:'male', image:'pb3.jpg', price:39.99},
+  {id:6, name:'Skirt', category:'pants', gender:'female', image:'pw3.jpg', price:34.99},
   // Hoodies
-  {id:7, name:'Hoodie Men', category:'hoodie', gender:'male', image:'images/hoodie1.jpg', price:54.99},
-  {id:8, name:'Hoodie Women', category:'hoodie', gender:'female', image:'images/hoodie2.jpg', price:49.99},
+  {id:7, name:'Hoodie Men', category:'hoodie', gender:'male', image:'hb2.jpg', price:54.99},
+  {id:8, name:'Hoodie Women', category:'hoodie', gender:'female', image:'hw2.jpg', price:49.99},
+   {id:7, name:'Hoodie Men', category:'hoodie', gender:'male', image:'hb3.jpg', price:54.99},
+  {id:8, name:'Hoodie Women', category:'hoodie', gender:'female', image:'hw4.jpg', price:49.99},
   // Suits
-  {id:9, name:'Business Suit', category:'suits', gender:'male', image:'images/suit1.jpg', price:99.99},
-  {id:10, name:'Evening Gown', category:'suits', gender:'female', image:'images/gown1.jpg', price:149.99},
+  {id:9, name:'Business Suit', category:'suits', gender:'male', image:'suit1.jpg', price:99.99},
+  {id:9, name:'Business Suit', category:'suits', gender:'male', image:'suit2.jpg', price:99.99},
+   {id:9, name:'Business Suit', category:'suits', gender:'male', image:'suit3.jpg', price:99.99},
   // Abayas
-{id:13, name:'Classic Abaya', category:'abayas', gender:'female', image:'images/abaya1.jpg', price:49.99},
-{id:14, name:'Luxury Abaya', category:'abayas', gender:'female', image:'images/abaya2.jpg', price:79.99},
-
+{id:13, name:'Classic Abaya', category:'abayas', gender:'female', image:'abaya1.jpg', price:49.99},
+{id:14, name:'Luxury Abaya', category:'abayas', gender:'female', image:'abaya2.jpg', price:79.99},
+{id:13, name:'Classic Abaya', category:'abayas', gender:'female', image:'abaya3.jpg', price:49.99},
+{id:14, name:'Luxury Abaya', category:'abayas', gender:'female', image:'abaya4.jpg', price:79.99},
 // Accessories
 {id:15, name:'Sunglasses', category:'accessories', gender:'male', image:'images/sunglasses1.jpg', price:29.99},
 {id:16, name:'Bag', category:'accessories', gender:'female', image:'images/bag1.jpg', price:59.99},
@@ -241,3 +251,4 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartCount();
     navigateTo('home');
 });
+
