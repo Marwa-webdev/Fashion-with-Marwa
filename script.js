@@ -1,7 +1,7 @@
 // -------------------- Products Data --------------------
 const products = [
   // Shirts
-  {id:1, name:'Classic Shirt', category:'shirts', gender:'male', image:'images\sg1.jpg', price:24.99},
+  {id:1, name:'Classic Shirt', category:'shirts', gender:'male', image:'sg1.jpg', price:24.99},
   {id:2, name:'Elegant Blouse', category:'shirts', gender:'female', image:'images/blouse1.jpg', price:29.99},
   {id:3, name:'Casual Tee', category:'shirts', gender:'male', image:'images/shirt2.jpg', price:19.99},
   {id:4, name:'Summer Top', category:'shirts', gender:'female', image:'images/blouse2.jpg', price:22.99},
@@ -241,4 +241,3 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartCount();
     navigateTo('home');
 });
-
