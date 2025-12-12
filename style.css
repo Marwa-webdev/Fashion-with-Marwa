@@ -843,6 +843,12 @@ body {
   font-size: 80px;
   color: rgba(255, 255, 255, 0.3);
 }
+.product-image img {
+    width: 100%;       /* make image fill container width */
+    height: auto;      /* maintain aspect ratio */
+    object-fit: contain; /* fit entire image inside container without cropping */
+    border-radius: 8px; /* optional, rounded corners */
+}
 
 .product-info {
   padding: 20px;
@@ -1792,6 +1798,7 @@ body {
     font-size: 16px;
   }
 }
+
 
 
 
