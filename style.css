@@ -118,7 +118,7 @@ body {
 /* Home Page Styling */
 .hero {
     height: 100vh; /* full viewport height */
-    background-image: url(home3.jpg); /* your image path */
+    background-image: url(../images/home3.jpg); /* your image path */
     background-repeat: no-repeat; /* stop repeating */
     background-size: cover;       /* cover entire area */
     background-position: center;  /* center the image */
@@ -842,12 +842,6 @@ body {
   justify-content: center;
   font-size: 80px;
   color: rgba(255, 255, 255, 0.3);
-}
-.product-image img {
-    width: 100%;       /* make image fill container width */
-    height: auto;      /* maintain aspect ratio */
-    object-fit: contain; /* fit entire image inside container without cropping */
-    border-radius: 8px; /* optional, rounded corners */
 }
 
 .product-info {
@@ -1798,8 +1792,4 @@ body {
     font-size: 16px;
   }
 }
-
-
-
-
 
