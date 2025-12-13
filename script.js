@@ -7,13 +7,6 @@ const products = [
   {id:4, name:'Summer Top', category:'shirts', gender:'female', image:'sg2.jpg', price:22.99},
   {id:5, name:'Casual Tee 2', category:'shirts', gender:'male', image:'sb3.jpg', price:19.99},
   {id:6, name:'Summer Top 2', category:'shirts', gender:'female', image:'sg3.jpg', price:22.99},
-  {id:7, name:'Classic Shirt', category:'shirts', gender:'male', image:'sb1.jpg', price:24.99},
-  {id:8, name:'Elegant Blouse', category:'shirts', gender:'female', image:'sg1.jpg', price:29.99},
-  {id:9, name:'Casual Tee', category:'shirts', gender:'male', image:'sb2.jpg', price:19.99},
-  {id:10, name:'Summer Top', category:'shirts', gender:'female', image:'sg2.jpg', price:22.99},
-  {id:11, name:'Casual Tee 2', category:'shirts', gender:'male', image:'sb3.jpg', price:19.99},
-  {id:12, name:'Summer Top 2', category:'shirts', gender:'female', image:'sg3.jpg', price:22.99},
-
 
   // Pants
   {id:7, name:'Jeans', category:'pants', gender:'male', image:'pb1.jpg', price:39.99},
@@ -22,101 +15,39 @@ const products = [
   {id:10, name:'Skirt 2', category:'pants', gender:'female', image:'pw2.jpg', price:34.99},
   {id:11, name:'Jeans 3', category:'pants', gender:'male', image:'pb3.jpg', price:39.99},
   {id:12, name:'Skirt 3', category:'pants', gender:'female', image:'pw3.jpg', price:34.99},
-  {id:7, name:'Jeans', category:'pants', gender:'male', image:'pb1.jpg', price:39.99},
-  {id:8, name:'Skirt', category:'pants', gender:'female', image:'pw1.jpg', price:34.99},
-  {id:9, name:'Jeans 2', category:'pants', gender:'male', image:'pb2.jpg', price:39.99},
-  {id:10, name:'Skirt 2', category:'pants', gender:'female', image:'pw2.jpg', price:34.99},
-  {id:11, name:'Jeans 3', category:'pants', gender:'male', image:'pb3.jpg', price:39.99},
-  {id:12, name:'Skirt 3', category:'pants', gender:'female', image:'pw3.jpg', price:34.99},
-
 
   // Hoodies
   {id:13, name:'Hoodie Men', category:'hoodie', gender:'male', image:'hb2.jpg', price:54.99},
   {id:14, name:'Hoodie Women', category:'hoodie', gender:'female', image:'hw2.jpg', price:49.99},
   {id:15, name:'Hoodie Men 2', category:'hoodie', gender:'male', image:'hb3.jpg', price:54.99},
   {id:16, name:'Hoodie Women 2', category:'hoodie', gender:'female', image:'hw4.jpg', price:49.99},
-   {id:13, name:'Hoodie Men', category:'hoodie', gender:'male', image:'hb2.jpg', price:54.99},
-  {id:14, name:'Hoodie Women', category:'hoodie', gender:'female', image:'hw2.jpg', price:49.99},
-  {id:15, name:'Hoodie Men 2', category:'hoodie', gender:'male', image:'hb3.jpg', price:54.99},
-  {id:16, name:'Hoodie Women 2', category:'hoodie', gender:'female', image:'hw4.jpg', price:49.99},
- {id:13, name:'Hoodie Men', category:'hoodie', gender:'male', image:'hb2.jpg', price:54.99},
-  {id:14, name:'Hoodie Women', category:'hoodie', gender:'female', image:'hw2.jpg', price:49.99},
-  {id:15, name:'Hoodie Men 2', category:'hoodie', gender:'male', image:'hb3.jpg', price:54.99},
-  {id:16, name:'Hoodie Women 2', category:'hoodie', gender:'female', image:'hw4.jpg', price:49.99},
-
 
   // Suits
   {id:17, name:'Suit 1', category:'suits', gender:'male', image:'suit1.jpg', price:99.99},
-  {id:18, name:'Suit 2', category:'suits', gender:'female', image:'suit2.jpg', price:99.99},
+  {id:18, name:'Suit 2', category:'suits', gender:'male', image:'suit2.jpg', price:99.99},
   {id:19, name:'Suit 3', category:'suits', gender:'male', image:'suit3.jpg', price:99.99},
-  {id:18, name:'Suit 2', category:'suits', gender:'female', image:'suit2.jpg', price:99.99},
-   {id:17, name:'Suit 1', category:'suits', gender:'male', image:'suit1.jpg', price:99.99},
-  {id:18, name:'Suit 2', category:'suits', gender:'female', image:'suit2.jpg', price:99.99},
-  {id:19, name:'Suit 3', category:'suits', gender:'male', image:'suit3.jpg', price:99.99},
-  {id:18, name:'Suit 2', category:'suits', gender:'female', image:'suit2.jpg', price:99.99},
-{id:19, name:'Suit 3', category:'suits', gender:'male', image:'suit3.jpg', price:99.99},
-  {id:18, name:'Suit 2', category:'suits', gender:'female', image:'suit2.jpg', price:99.99},
 
   // Abayas
   {id:20, name:'Classic Abaya', category:'abayas', gender:'female', image:'abaya1.jpg', price:49.99},
   {id:21, name:'Luxury Abaya', category:'abayas', gender:'female', image:'abaya2.jpg', price:79.99},
   {id:22, name:'Classic Abaya 2', category:'abayas', gender:'female', image:'abaya3.jpg', price:49.99},
   {id:23, name:'Luxury Abaya 2', category:'abayas', gender:'female', image:'abaya4.jpg', price:79.99},
-  {id:20, name:'Classic Abaya', category:'abayas', gender:'female', image:'abaya1.jpg', price:49.99},
-  {id:21, name:'Luxury Abaya', category:'abayas', gender:'female', image:'abaya2.jpg', price:79.99},
-  {id:22, name:'Classic Abaya 2', category:'abayas', gender:'female', image:'abaya3.jpg', price:49.99},
-  {id:23, name:'Luxury Abaya 2', category:'abayas', gender:'female', image:'abaya4.jpg', price:79.99},
-
 
   // Accessories
-  {id:24, name:'Sunglasses', category:'accessories', gender:'male', image:'acc1.jpg', price:29.99},
-  {id:25, name:'Bag', category:'accessories', gender:'female', image:'acc2.jpg', price:59.99},
-  {id:24, name:'Sunglasses', category:'accessories', gender:'male', image:'acc1.jpg', price:29.99},
-  {id:25, name:'Bag', category:'accessories', gender:'female', image:'acc2.jpg', price:59.99},
-  {id:24, name:'Sunglasses', category:'accessories', gender:'male', image:'acc1.jpg', price:29.99},
-  {id:25, name:'Bag', category:'accessories', gender:'female', image:'acc2.jpg', price:59.99},
-  {id:24, name:'Sunglasses', category:'accessories', gender:'male', image:'acc1.jpg', price:29.99},
-  {id:25, name:'Bag', category:'accessories', gender:'female', image:'acc2.jpg', price:59.99},
-  {id:24, name:'Sunglasses', category:'accessories', gender:'male', image:'acc1.jpg', price:29.99},
-  {id:25, name:'Bag', category:'accessories', gender:'female', image:'acc2.jpg', price:59.99},
   {id:24, name:'Sunglasses', category:'accessories', gender:'male', image:'acc1.jpg', price:29.99},
   {id:25, name:'Bag', category:'accessories', gender:'female', image:'acc2.jpg', price:59.99},
 
   // Perfumes
   {id:26, name:'Men Perfume', category:'perfumes', gender:'male', image:'per1.jpg', price:59.99},
   {id:27, name:'Women Perfume', category:'perfumes', gender:'female', image:'per2.jpg', price:64.99},
-   {id:26, name:'Men Perfume', category:'perfumes', gender:'male', image:'per1.jpg', price:59.99},
-  {id:27, name:'Women Perfume', category:'perfumes', gender:'female', image:'per2.jpg', price:64.99},
- {id:26, name:'Men Perfume', category:'perfumes', gender:'male', image:'per1.jpg', price:59.99},
-  {id:27, name:'Women Perfume', category:'perfumes', gender:'female', image:'per2.jpg', price:64.99},
- {id:26, name:'Men Perfume', category:'perfumes', gender:'male', image:'per1.jpg', price:59.99},
-  {id:27, name:'Women Perfume', category:'perfumes', gender:'female', image:'per2.jpg', price:64.99},
- {id:26, name:'Men Perfume', category:'perfumes', gender:'male', image:'per1.jpg', price:59.99},
-  {id:27, name:'Women Perfume', category:'perfumes', gender:'female', image:'per2.jpg', price:64.99},
-
 
   // Shoes
   {id:28, name:'Sneakers', category:'shoes', gender:'male', image:'shoe1.jpg', price:69.99},
   {id:29, name:'Heels', category:'shoes', gender:'female', image:'shoe2.jpg', price:79.99},
-   {id:28, name:'Sneakers', category:'shoes', gender:'male', image:'shoe1.jpg', price:69.99},
-  {id:29, name:'Heels', category:'shoes', gender:'female', image:'shoe2.jpg', price:79.99},
- {id:28, name:'Sneakers', category:'shoes', gender:'male', image:'shoe1.jpg', price:69.99},
-  {id:29, name:'Heels', category:'shoes', gender:'female', image:'shoe2.jpg', price:79.99},
-   {id:28, name:'Sneakers', category:'shoes', gender:'male', image:'shoe1.jpg', price:69.99},
-  {id:29, name:'Heels', category:'shoes', gender:'female', image:'shoe2.jpg', price:79.99},
-   {id:28, name:'Sneakers', category:'shoes', gender:'male', image:'shoe1.jpg', price:69.99},
-  {id:29, name:'Heels', category:'shoes', gender:'female', image:'shoe2.jpg', price:79.99},
 
   // Makeup
-  {id:30, name:'Men Watch', category:'makeup', gender:'female', image:'watch.jpg', price:89.99},
+  {id:30, name:'Men Watch', category:'makeup', gender:'male', image:'watch.jpg', price:89.99},
   {id:31, name:'Necklace', category:'makeup', gender:'female', image:'necklace.jpg', price:79.99}
-  {id:30, name:'Men Watch', category:'makeup', gender:'female', image:'watch.jpg', price:89.99},
-  {id:31, name:'Necklace', category:'makeup', gender:'female', image:'necklace.jpg', price:79.99}
-  {id:30, name:'Men Watch', category:'makeup', gender:'female', image:'watch.jpg', price:89.99},
-  {id:31, name:'Necklace', category:'makeup', gender:'female', image:'necklace.jpg', price:79.99}
-  {id:30, name:'Men Watch', category:'makeup', gender:'female', image:'watch.jpg', price:89.99},
-  {id:31, name:'Necklace', category:'makeup', gender:'female', image:'necklace.jpg', price:79.99}
-  
 ];
 
 // -------------------- Cart --------------------
