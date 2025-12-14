@@ -118,7 +118,7 @@ body {
 /* Home Page Styling */
 .hero {
     height: 100vh; /* full viewport height */
-    background-image: url(../images/home3.jpg); /* your image path */
+    background-image: url(home3.jpg); /* your image path */
     background-repeat: no-repeat; /* stop repeating */
     background-size: cover;       /* cover entire area */
     background-position: center;  /* center the image */
@@ -1792,4 +1792,3 @@ body {
     font-size: 16px;
   }
 }
-
