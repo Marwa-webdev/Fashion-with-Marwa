@@ -3,12 +3,12 @@ const products = [
   // Shirts
   {id:1, name:'Casaul Shirt', category:'shirts', gender:'male', image:'images/casual shirt.jfif', price:899},
   {id:2, name:'Button Down Shirt', category:'shirts', gender:'female', image:'images/button down shirt.jfif', price:899},
-  {id:3, name:'Double Pocket Shirt', category:'shirts', gender:'male', image:'images/double pocket shirt.jfif', price:799},
+  {id:3, name:'Double Pocket Shirt', category:'shirts', gender:'male', image:'images/Double pocket shirt.jfif', price:799},
   {id:4, name:'Casual Shirt', category:'shirts', gender:'female', image:'images/casual shirt w.jfif', price:799},
   {id:5, name:'Polo Shirt', category:'shirts', gender:'male', image:'images/polo shirt.jfif', price:999},
-  {id:6, name:'Formal Top', category:'shirts', gender:'female', image:'imiages/formal top.jfif', price:899},
+  {id:6, name:'Formal Top', category:'shirts', gender:'female', image:'images/formal top.jfif', price:899},
   {id:7, name:'Printed Shirt', category:'shirts', gender:'male', image:'images/printed shirt.jfif', price:999},
-  {id:8, name:'Plain White Shirt', category:'shirts', gender:'female', image:'images/sg1.jfif', price:1999},
+  {id:8, name:'Plain White Shirt', category:'shirts', gender:'female', image:'images/sg2.jpg', price:1999},
   {id:9, name:'T-shirt', category:'shirts', gender:'male', image:'images/T-shirt.jfif', price:899},
   {id:10, name:'Silk Shirt', category:'shirts', gender:'female', image:'images/silk shirt.jfif', price:1999},
   {id:11, name:'Printed Shirt', category:'shirts', gender:'male', image:'images/sb4.jpg', price:999},
@@ -362,4 +362,5 @@ function submitContactForm() {
     document.getElementById("subject").value = "";
     document.getElementById("message").value = "";
 }
+
 
