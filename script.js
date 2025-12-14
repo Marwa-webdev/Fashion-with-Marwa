@@ -21,13 +21,13 @@ const products = [
   {id:16, name:'Formal Parallel Trouser', category:'pants', gender:'female', image:'images/formal parallel trouser.jfif', price:5000},
   {id:17, name:'Formal', category:'pants', gender:'male', image:'images/formal trouser.jfif', price:4500},
   {id:18, name:'High Rise Wrinkle Free Trouser', category:'pants', gender:'female', image:'images/high rise wrinkle free trouser.jfif', price:4599},
-  {id:19, name:'Pant', category:'pants', gender:'male', image:'images/pb1.jpg', price:500},/////
+  {id:19, name:'Pant', category:'pants', gender:'male', image:'images/pb1.jpg', price:500},
   {id:20, name:'LoosePant', category:'pants', gender:'female', image:'images/loose pant.jfif', price:4798},
-  {id:21, name:'White Pant', category:'pants', gender:'male', image:'images/pb2.jpg', price:3999},///////////
-  {id:22, name:'Plain Pant', category:'pants', gender:'female', image:'images/pw1.jpg', price:3999},///////
-  {id:23, name:'Black Cargo', category:'pants', gender:'male', image:'images/pb3.jpg', price:4700},/////////
-  {id:24, name:'Embroided Pant', category:'pants', gender:'female', image:'images/pw2.jpg', price:4697},//////
-  {id:23, name:'Printed Cargo Pant', category:'pants', gender:'male', image:'images/pb4.jpg', price:5000},/////
+  {id:21, name:'White Pant', category:'pants', gender:'male', image:'images/pb2.jpg', price:3999},
+  {id:22, name:'Plain Pant', category:'pants', gender:'female', image:'images/pw1.jpg', price:3999},
+  {id:23, name:'Black Cargo', category:'pants', gender:'male', image:'images/pb3.jpg', price:4700},
+  {id:24, name:'Embroided Pant', category:'pants', gender:'female', image:'images/pw2.jpg', price:4697},
+  {id:23, name:'Printed Cargo Pant', category:'pants', gender:'male', image:'images/pb4.jpg', price:5000},
   {id:24, name:'Winter Trouser', category:'pants', gender:'female', image:'imageswinter trouser.jfif', price:5000},
 
 
@@ -38,12 +38,12 @@ const products = [
   {id:28, name:'Crop Hoodie', category:'hoodie', gender:'female', image:'images/crop hoodie.jfif', price:5000},
   {id:29, name:'Gym Hoodie', category:'hoodie', gender:'male', image:'images/gym hoodie.jfif', price:5000},
   {id:30, name:'Cute Women Hoodie', category:'hoodie', gender:'female', image:'images/cute women hoodie.jfif', price:5000},
-  {id:31, name:'Plain White Hoodie', category:'hoodie', gender:'male', image:'images/hb1.jpg', price:5000},///////
-  {id:32, name:'Korean Cute Hoodie', category:'hoodie', gender:'female', image:'images/hw2.jpg', price:5000},////
-  {id:33, name:'Plain Black Hoodie', category:'hoodie', gender:'male', image:'images/hb2.jpg, price:5000},/////
-  {id:34, name:'Zip Up Hoodie', category:'hoodie', gender:'female', image:'images/hw3.jpg', price:5000},///
-  {id:35, name:'Oversized Hoodie', category:'hoodie', gender:'male', image:'images/hb3.jpg', price:5000},////
-  {id:36, name:'Pink Hoodie', category:'hoodie', gender:'female', image:'images/hw4.jpg', price:5000},/////
+  {id:31, name:'Plain White Hoodie', category:'hoodie', gender:'male', image:'images/hb1.jpg', price:5000},
+  {id:32, name:'Korean Cute Hoodie', category:'hoodie', gender:'female', image:'images/hw2.jpg', price:5000},
+  {id:33, name:'Plain Black Hoodie', category:'hoodie', gender:'male', image:'images/hb2.jpg', price:5000},
+  {id:34, name:'Zip Up Hoodie', category:'hoodie', gender:'female', image:'images/hw3.jpg' , price:5000},
+  {id:35, name:'Oversized Hoodie', category:'hoodie', gender:'male', image:'images/hb3.jpg', price:5000},
+  {id:36, name:'Pink Hoodie', category:'hoodie', gender:'female', image:'images/hw4.jpg', price:5000},
   {id:35, name:'Japanese Asthetic Hoodie', category:'hoodie', gender:'male', image:'images/japanese asthetic hoodie.jfif', price:5000},
   {id:36, name:'Panda Hoodie', category:'hoodie', gender:'female', image:'images/panda hoodie.jfif', price:5000},
   {id:35, name:'Stylish Hoodie', category:'hoodie', gender:'male', image:'images/stylish hoodie.jfif', price:5000},
@@ -66,10 +66,10 @@ const products = [
   {id:36, name:'Office Suit', category:'suits', gender:'female', image:'images/suit.jfif', price:9999},
   // Abayas
   {id:20, name:'Classic Abaya', category:'abayas', gender:'female', image:'images/abaya.jfif', price:5000},
-  {id:21, name:'Luxury Abaya', category:'abayas', gender:'female', image:'images/abaya1.jpg', price:5000},////
-  {id:22, name:'Butterfly abaya', category:'abayas', gender:'female', image:'images/abaya2.jpg', price:5000},////
-  {id:23, name:'Embroided abaya', category:'abayas', gender:'female', image:'images/abaya3.jpg', price:5000},.///
-  {id:20, name:'Butterfly abaya', category:'abayas', gender:'female', image:'images/abaya4.jpg', price:5000},////
+  {id:21, name:'Luxury Abaya', category:'abayas', gender:'female', image:'images/abaya1.jpg', price:5000},
+  {id:22, name:'Butterfly abaya', category:'abayas', gender:'female', image:'images/abaya2.jpg', price:5000},
+  {id:23, name:'Embroided abaya', category:'abayas', gender:'female', image:'images/abaya3.jpg', price:5000},
+  {id:20, name:'Butterfly abaya', category:'abayas', gender:'female', image:'images/abaya4.jpg', price:5000},
   {id:21, name:'Embroided Kaftan', category:'abayas', gender:'female', image:'images/embroided kaftan.jfif', price:5000},
   {id:22, name:'Irani Chadar', category:'abayas', gender:'female', image:'images/irani chadar.jfif', price:5000},
   {id:23, name:'Jilbab', category:'abayas', gender:'female', image:'images/jilbab abaya.jfif', price:5000},
@@ -362,4 +362,3 @@ function submitContactForm() {
     document.getElementById("subject").value = "";
     document.getElementById("message").value = "";
 }
-
