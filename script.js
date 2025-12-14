@@ -58,9 +58,9 @@ const products = [
   {id:36, name:'Formal Suit', category:'suits', gender:'female', image:'images/formal suit 1.jfif', price:10000},
   {id:19, name:'Grey Suit', category:'suits', gender:'male', image:'images/grey suit.jfif', price:11000},
   {id:36, name:'Grey Suit', category:'suits', gender:'female', image:'images/formal suit.jfif', price:11000},
-  {id:17, name:'Elegent Suit', category:'suits', gender:'male', image:'images/suit1.jpg', price:10000},//////
+  {id:17, name:'Elegent Suit', category:'suits', gender:'male', image:'images/suit1.jpg', price:10000},
   {id:36, name:'White Suit', category:'suits', gender:'female', image:'images/suit 4.jfif', price:9999},
-  {id:18, name:'Blue Suit', category:'suits', gender:'male', image:'images/suit2.jpg', price:9999},//////
+  {id:18, name:'Blue Suit', category:'suits', gender:'male', image:'images/suit2.jpg', price:9999},
   {id:36, name:'White Suit', category:'suits', gender:'female', image:'images/suitt.jfif', price:11000},
   {id:19, name:'Wedding Suit', category:'suits', gender:'male', image:'images/wedding suit.jfif', price:9999},
   {id:36, name:'Office Suit', category:'suits', gender:'female', image:'images/suit.jfif', price:9999},
@@ -99,7 +99,7 @@ const products = [
 {id:25, name:'Glasses', category:'accessories', gender:'female', image:'white eyeglass.jfif', price:500},
 
   // Perfumes
-  {id:26, name:'Black Tie', category:'perfumes', gender:'male', image:'black tie.png', price:4000},///
+  {id:26, name:'Black Tie', category:'perfumes', gender:'male', image:'black tie.png', price:4000},
   {id:27, name:'Gorgeous', category:'perfumes', gender:'female', image:'Gorgeous.jfif', price:5000},
   {id:26, name:'Calvin Klein', category:'perfumes', gender:'male', image:'calvin klein.jfif', price:5000},
   {id:27, name:'J.perfume', category:'perfumes', gender:'female', image:'J.perfume.jfif', price:4000},
@@ -109,7 +109,7 @@ const products = [
   {id:27, name:'Queen of Paradise', category:'perfumes', gender:'female', image:'queen of paradise.jfif', price:5700},
   {id:26, name:'Office', category:'perfumes', gender:'male', image:'office for men.jfif', price:4800},
   {id:27, name:'Scents', category:'perfumes', gender:'female', image:'scents', price:3500},
-  {id:26, name:'Luxury Perfume', category:'perfumes', gender:'male', image:'peb1.jpg', price:5600},/////
+  {id:26, name:'Luxury Perfume', category:'perfumes', gender:'male', image:'peb1.jpg', price:5600},
   {id:27, name:'Whisky Smoke', category:'perfumes', gender:'female', image:'whisky smoke.jfif', price:7000},
 
   // Shoes
@@ -117,25 +117,25 @@ const products = [
   {id:29, name:'Heels', category:'shoes', gender:'female', image:'ladies heel.jfif', price:4000},
   {id:28, name:'Nike Air Jorden', category:'shoes', gender:'male', image:'nike air jorden.jfif', price:3500},
   {id:29, name:'Pencil Heel', category:'shoes', gender:'female', image:'pensil heel.jfif', price:5000},
-  {id:28, name:'Formal Shoe', category:'shoes', gender:'male', image:'sm1.jpg', price:3000},//////
+  {id:28, name:'Formal Shoe', category:'shoes', gender:'male', image:'sm1.jpg', price:3000},
   {id:29, name:'Sandal', category:'shoes', gender:'female', image:'sandal.jfif', price:4500},
-  {id:28, name:'Sneakers', category:'shoes', gender:'male', image:'sm2.jpg', price:3500},///////
-  {id:29, name:'Sneakers', category:'shoes', gender:'female', image:'sw1.jpg', price:5000},////
+  {id:28, name:'Sneakers', category:'shoes', gender:'male', image:'sm2.jpg', price:3500},
+  {id:29, name:'Sneakers', category:'shoes', gender:'female', image:'sw1.jpg', price:5000},
   {id:28, name:'Sneakers', category:'shoes', gender:'male', image:'sneakers', price:6000},
-  {id:29, name:'Heels', category:'shoes', gender:'female', image:'sw2.jpg', price:4899},////
+  {id:29, name:'Heels', category:'shoes', gender:'female', image:'sw2.jpg', price:4899},
   {id:28, name:'Sneakers', category:'shoes', gender:'male', image:'shoe1.jfif', price:69.99},
   {id:29, name:'Velvet Heel', category:'shoes', gender:'female', image:'velvet high heel.jfif', price:6000},
 
 // Makeup
-{id:30, name:'Black Eye Liner', category:'makeup', gender:'female', image:'black eye liner.png', price:400},//////
+{id:30, name:'Black Eye Liner', category:'makeup', gender:'female', image:'black eye liner.png', price:400},
 {id:31, name:'Eye Brow Pencil', category:'makeup', gender:'female', image:'eye brow pencil.jfif', price:500},
 {id:32, name:'Eye Shadow', category:'makeup', gender:'female', image:'eye shadow,jfif', price:2000},
 {id:33, name:'Face Powder ', category:'makeup', gender:'female', image:'face powder.jfif', price:1500},
 {id:34, name:'Lash Curler', category:'makeup', gender:'female', image:'lash curler.jfif', price:1000},
 {id:35, name:'Liquid Lipstick', category:'makeup', gender:'female', image:'liquid lipstick.jfif', price:400},
 {id:36, name:'Mahroon Lipstick', category:'makeup', gender:'female', image:'mahroon lipstick.jfif', price:600},
-{id:37, name:'Pink Lipglos', category:'makeup', gender:'female', image:'mw1.jpg', price:300},///////
-{id:38, name:'Conceler', category:'makeup', gender:'female', image:'mw2.jpg', price:500},////////
+{id:37, name:'Pink Lipglos', category:'makeup', gender:'female', image:'mw1.jpg', price:300},
+{id:38, name:'Conceler', category:'makeup', gender:'female', image:'mw2.jpg', price:500},
 {id:39, name:'Setting Spray', category:'makeup', gender:'female', image:'setting spray.jfif', price:899}
 
 ];
@@ -362,3 +362,4 @@ function submitContactForm() {
     document.getElementById("subject").value = "";
     document.getElementById("message").value = "";
 }
+
