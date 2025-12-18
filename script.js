@@ -7,7 +7,7 @@ const products = [
   {id:3, name:'Double Pocket Shirt', category:'shirts', gender:'male', image:'images/Double pocket shirt.jfif', price:799},
   {id:4, name:'Casual Shirt', category:'shirts', gender:'female', image:'images/casual shirt w.jfif', price:799},
   {id:5, name:'Polo Shirt', category:'shirts', gender:'male', image:'images/polo shirt.jfif', price:999},
-  {id:6, name:'Formal Top', category:'shirts', gender:'female', image:'imiages/formal top.jfif', price:899},
+  {id:6, name:'Formal Top', category:'shirts', gender:'female', image:'images/formal top.jfif', price:899},
   {id:7, name:'Printed Shirt', category:'shirts', gender:'male', image:'images/printed shirt.jfif', price:999},
   {id:8, name:'Plain White Shirt', category:'shirts', gender:'female', image:'images/sg2.jpg', price:1999},
   {id:9, name:'T-shirt', category:'shirts', gender:'male', image:'images/T-shirt.jfif', price:899},
@@ -76,14 +76,14 @@ const products = [
   {id:64, name:'Jilbab', category:'abayas', gender:'female', image:'images/jilbab abaya.jfif', price:5000},
 
   // Accessories
-  {id:65, name:'Casual Watch', category:'accessories', gender:'male', image:'iamges/casual watch.jfif', price:2000},
+  {id:65, name:'Casual Watch', category:'accessories', gender:'male', image:'images/casual watch.jfif', price:2000},
   {id:66, name:'Butterfly EarRing', category:'accessories', gender:'female', image:'images/butterfly ear ring.jfif', price:500},
   {id:67, name:'Leather Laptop Bag', category:'accessories', gender:'male', image:'images/leather laptop bag.jfif', price:5000},
   {id:68, name:'Ear Ring', category:'accessories', gender:'female', image:'images/ear ring.jfif', price:500},
   {id:69, name:'Leather Wallet', category:'accessories', gender:'male', image:'images/leather wallet.jfif', price:2500},
   {id:70, name:'Hand Bag', category:'accessories', gender:'female', image:'images/hand bag.jfif', price:7000},
   {id:71, name:'Long Purse ', category:'accessories', gender:'male', image:'images/long purse.jfif', price:1500},
-  {id:72, name:'Rolex', category:'accessories', gender:'female', image:'images/ladies rolex', price:10000},
+  {id:72, name:'Rolex', category:'accessories', gender:'female', image:'images/ladies rolex.jfif', price:10000},
   {id:73, name:'Man Luxury Watch', category:'accessories', gender:'male', image:'images/man luxury watch.jfif', price:10000},
   {id:74, name:'Large Hoop Ear Ring', category:'accessories', gender:'female', image:'images/large hoop ear ring.jfif', price:500},
   {id:75, name:'Rolex', category:'accessories', gender:'male', image:'images/rolex m.jfif', price:10000},
@@ -320,4 +320,5 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCart(); // ✅ safety render
     navigateTo('home');
 });
+
 
