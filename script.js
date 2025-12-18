@@ -103,13 +103,13 @@ const products = [
   {id:87, name:'Black Tie', category:'perfumes', gender:'male', image:'images/black tie.png', price:4000},
   {id:88, name:'Gorgeous', category:'perfumes', gender:'female', image:'images/Gorgeous.jfif', price:5000},
   {id:89, name:'Calvin Klein', category:'perfumes', gender:'male', image:'images/calvin klein.jfif', price:5000},
-  {id:90, name:'J.perfume', category:'perfumes', gender:'female', image:'images/J.perfume.jfif', price:4000},
+  {id:90, name:'J.perfume', category:'perfumes', gender:'female', image:'https://github.com/Marwa-webdev/Fashion-with-Marwa/blob/main/images/J.%20perfume.jfif', price:4000},
   {id:91, name:'Destiny', category:'perfumes', gender:'male', image:'images/destiny.jfif', price:3999},
   {id:92, name:'Premium Fregnance', category:'perfumes', gender:'female', image:'images/premium fregnence.jfif', price:4500},
   {id:93, name:'Gentleman', category:'perfumes', gender:'male', image:'images/gentlemen.jfif', price:5500},
   {id:94, name:'Queen of Paradise', category:'perfumes', gender:'female', image:'images/queen of paradise.jfif', price:5700},
   {id:95, name:'Office', category:'perfumes', gender:'male', image:'images/office for men.jfif', price:4800},
-  {id:96, name:'Scents', category:'perfumes', gender:'female', image:'images/scents', price:3500},
+  {id:96, name:'Scents', category:'perfumes', gender:'female', image:'images/scents,jfif', price:3500},
   {id:97, name:'Luxury Perfume', category:'perfumes', gender:'male', image:'images/peb1.jpg', price:5600},
   {id:98, name:'Whisky Smoke', category:'perfumes', gender:'female', image:'images/whisky smoke.jfif', price:7000},
 
@@ -117,27 +117,24 @@ const products = [
   {id:99, name:'Formal Shoe', category:'shoes', gender:'male', image:'images/formal shoe.jfif', price:3000},
   {id:100, name:'Heels', category:'shoes', gender:'female', image:'images/ladies heel.jfif', price:4000},
   {id:101, name:'Nike Air Jorden', category:'shoes', gender:'male', image:'images/nike air jorden.jfif', price:3500},
-  {id:102, name:'Pencil Heel', category:'shoes', gender:'female', image:'images/pensil heel.jfif', price:5000},
+  {id:102, name:'Pencil Heel', category:'shoes', gender:'female', image:'images/pencil heel.jfif', price:5000},
   {id:103, name:'Formal Shoe', category:'shoes', gender:'male', image:'images/sm1.jpg', price:3000},
   {id:104, name:'Sandal', category:'shoes', gender:'female', image:'images/sandal.jfif', price:4500},
-  {id:105, name:'Sneakers', category:'shoes', gender:'male', image:'images/sm2.jpg', price:3500},
-  {id:106, name:'Sneakers', category:'shoes', gender:'female', image:'images/sw1.jpg', price:5000},
-  {id:107, name:'Sneakers', category:'shoes', gender:'male', image:'images/sneakers', price:6000},
+  {id:107, name:'Sneakers', category:'shoes', gender:'male', image:'images/sneakers.jfif', price:6000},
   {id:108, name:'Heels', category:'shoes', gender:'female', image:'images/sw2.jpg', price:4899},
   {id:109, name:'Sneakers', category:'shoes', gender:'male', image:'images/shoe1.jfif', price:699},
 
   // Makeup
   {id:110, name:'Black Eye Liner', category:'makeup', gender:'female', image:'images/black eye liner.png', price:400},
   {id:111, name:'Eye Brow Pencil', category:'makeup', gender:'female', image:'images/eye brow pencil.jfif', price:500},
-  {id:112, name:'Eye Shadow', category:'makeup', gender:'female', image:'images/eye shadow,jfif', price:2000},
+  {id:112, name:'Eye Shadow', category:'makeup', gender:'female', image:'images/eye shadow.jfif', price:2000},
   {id:113, name:'Face Powder ', category:'makeup', gender:'female', image:'images/face powder.jfif', price:1500},
   {id:114, name:'Lash Curler', category:'makeup', gender:'female', image:'images/lash curler.jfif', price:1000},
-  {id:115, name:'Lip Stick', category:'makeup', gender:'female', image:'images/lip stick.jfif', price:799},
-  {id:116, name:'Nail Paint', category:'makeup', gender:'female', image:'images/nail paint.jfif', price:350},
-  {id:117, name:'Eye Shadow', category:'makeup', gender:'female', image:'images/peach eye shadow.jfif', price:1200},
-  {id:118, name:'Powder', category:'makeup', gender:'female', image:'images/powder.jfif', price:1999},
-  {id:119, name:'Rouge', category:'makeup', gender:'female', image:'images/rouge.jfif', price:600},
-  {id:120, name:'Lip Stick', category:'makeup', gender:'female', image:'images/lip stick.jfif', price:500},
+  {id:115, name:'Lip Stick', category:'makeup', gender:'female', image:'images/liquid lipstck.jfif', price:799},
+  {id:120, name:'Lip Stick', category:'makeup', gender:'female', image:'images/mahroon lipstick.jfif', price:500},
+  {id:114, name:'Lip Gloss', category:'makeup', gender:'female', image:'images/mw1.jpg', price:1000},
+  {id:115, name:'Concealer', category:'makeup', gender:'female', image:'images/mw2.jpg', price:799},
+  {id:120, name:'Setting Spray', category:'makeup', gender:'female', image:'images/setting spray.jfif', price:500},
 ];
 
 
@@ -320,5 +317,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCart(); // ✅ safety render
     navigateTo('home');
 });
+
 
 
