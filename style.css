@@ -933,6 +933,9 @@ body {
 }
 
 .add-to-cart-btn,
+
+/* Costomisation Section */
+
 .customize-btn {
   flex: 1;
   padding: 10px 15px;
@@ -1372,6 +1375,84 @@ body {
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
 }
+.customization-section {
+  padding: 40px;
+}
+
+.custom-type-btns {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.custom-type-btns button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.custom-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.custom-box {
+  width: 320px;
+}
+
+.design-area {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.custom-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.size-options {
+  display: flex;
+  gap: 8px;
+}
+
+/* TEXT ON IMAGE */
+.design-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: move;
+}
+
+/* LOGO ON IMAGE */
+.design-logo {
+  position: absolute;
+  width: 80px;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: move;
+}
+
+.added-msg {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -1458,220 +1539,67 @@ body {
 }
 
 /* Customization Section */
+/* ================= CUSTOMIZATION SECTION ================= */
+
 .customization-section {
-  min-height: calc(100vh - 70px);
-  padding: 40px;
-  background: linear-gradient(135deg, var(--primary-black) 0%, var(--dark-gray) 100%);
+  min-height: 100vh;          /* FULL SCREEN */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* vertical center */
+  align-items: center;        /* horizontal center */
+  text-align: center;
 }
 
 .customization-section h2 {
-  color: var(--primary-pink);
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  margin-bottom: 30px;
 }
 
-.customization-items {
+/* Buttons row */
+.custom-buttons {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.custom-item-btn {
-  background: linear-gradient(135deg, var(--dark-gray), #3a3a3a);
-  border: 2px solid var(--primary-blue);
-  color: white;
-  padding: 15px 30px;
-  font-size: 18px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.custom-item-btn:hover {
-  background: linear-gradient(135deg, var(--primary-blue), #00b8d4);
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
-}
-
-.customization-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 30px;
-  background: rgba(42, 42, 42, 0.8);
-  border: 2px solid var(--primary-pink);
-  border-radius: 15px;
-}
-
-.customization-preview {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-  border-radius: 15px;
-  padding: 40px;
-  min-height: 300px;
-}
-
-.preview-item {
-  font-size: 150px;
-  transition: all 0.3s ease;
-  padding: 30px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 10px;
-  min-height: 200px;
-  min-width: 200px;
-  line-height: 1.2;
-}
-
-.customization-controls {
-  display: flex;
-  flex-direction: column;
   gap: 20px;
 }
 
-.customization-controls h3 {
-  color: var(--primary-pink);
-  font-size: 24px;
-  text-transform: uppercase;
-}
-
-.control-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.control-group label {
-  color: var(--primary-blue);
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.color-picker {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.color-btn {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-}
-
-.color-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(255, 20, 147, 0.5);
-}
-
-.size-selector {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.size-btn {
-  padding: 10px;
-  background: var(--dark-gray);
-  border: 2px solid var(--primary-blue);
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: bold;
-}
-
-.size-btn:hover {
-  background: var(--primary-blue);
-}
-
-.size-btn.active {
-  background: var(--primary-pink);
-  border-color: var(--primary-pink);
-}
-
-#customText {
-  padding: 10px;
-  background: var(--dark-gray);
-  border: 2px solid var(--primary-blue);
-  color: white;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-#customText::placeholder {
-  color: #aaa;
-}
-
-.custom-price {
-  background: var(--dark-gray);
-  border: 2px solid var(--primary-pink);
-  padding: 15px;
-  border-radius: 5px;
-  color: var(--primary-pink);
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.add-custom-to-cart-btn {
-  padding: 12px 20px;
-  background: linear-gradient(135deg, var(--primary-pink), #ff69b4);
-  border: none;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
+/* Buttons style (optional polish) */
+.custom-buttons button {
+  padding: 15px 30px;
   font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.add-custom-to-cart-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255, 20, 147, 0.4);
+.custom-boxes {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  gap: 50px;
+  margin-top: 30px;
 }
 
-@media (max-width: 768px) {
-  .customization-container {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
+.custom-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
 
-  .customization-items {
-    gap: 15px;
-  }
+.custom-actions button {
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.design-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-weight: bold;
+}
 
-  .custom-item-btn {
-    padding: 12px 20px;
-    font-size: 14px;
-  }
-
-  .preview-item {
-    font-size: 100px;
-  }
-
-  .color-picker,
-  .size-selector {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.design-logo {
+  width: 80px;
+  display: block;
+  margin: 10px auto;
 }
 
 /* Footer */
@@ -1789,6 +1717,5 @@ body {
     font-size: 16px;
   }
 }
-
 
 
