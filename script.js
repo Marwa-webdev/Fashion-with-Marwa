@@ -317,6 +317,154 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCart(); // ✅ safety render
     navigateTo('home');
 });
+// -------------------- Contact Form --------------------
+function submitContactForm() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
 
+    if (!name || !email || !phone || !subject || !message) {
+        alert('Please fill all fields');
+        return;
+    }
 
+    alert('Message sent successfully!');
+
+    // Clear inputs
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('subject').value = '';
+    document.getElementById('message').value = '';
+}
+function showCustomization(type) {
+    document.getElementById('shirt-custom').classList.add('hidden');
+    document.getElementById('hoodie-custom').classList.add('hidden');
+
+    if (type === 'shirt') {
+        document.getElementById('shirt-custom').classList.remove('hidden');
+    } else if (type === 'hoodie') {
+        document.getElementById('hoodie-custom').classList.remove('hidden');
+    }
+}
+
+// -------------------- Customization: Add Text --------------------
+function addText(btn) {
+    const box = btn.closest('.custom-box');
+    if (!box) return;
+
+    let text = prompt("Enter your text:");
+    if (!text) return;
+
+    let textEl = box.querySelector('.design-text');
+
+    if (!textEl) {
+        textEl = document.createElement('div');
+        textEl.className = 'design-text';
+        box.appendChild(textEl);
+    }
+
+    textEl.textContent = text;
+}
+
+// -------------------- Customization: Add Logo --------------------
+function addLogo(btn) {
+    const box = btn.closest('.custom-box');
+    if (!box) return;
+
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+
+    input.onchange = () => {
+        const img = document.createElement('img');
+        img.src = URL.createObjectURL(input.files[0]);
+        img.className = 'design-logo';
+        box.appendChild(img);
+    };
+
+    input.click();
+}
+function addToCustomCart(btn) {
+    const box = btn.closest('.custom-box');
+    if (!box) return;
+
+    alert('Customized item added to cart!');
+}
+function showCustomization(type) {
+    document.getElementById('shirt-custom').classList.add('hidden');
+    document.getElementById('hoodie-custom').classList.add('hidden');
+
+    if (type === 'shirt') {
+        document.getElementById('shirt-custom').classList.remove('hidden');
+    } else {
+        document.getElementById('hoodie-custom').classList.remove('hidden');
+    }
+}
+
+// Add Text
+function addText(btn) {
+    const box = btn.closest('.custom-box');
+    const area = box.querySelector('.design-area');
+
+    let text = prompt("Enter text:");
+    if (!text) return;
+
+    let el = area.querySelector('.design-text');
+    if (!el) {
+        el = document.createElement('div');
+        el.className = 'design-text';
+        area.appendChild(el);
+    }
+
+    el.textContent = text;
+}
+
+// Add Logo
+function addLogo(btn) {
+    const box = btn.closest('.custom-box');
+    const area = box.querySelector('.design-area');
+
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+
+    input.onchange = () => {
+        const img = document.createElement('img');
+        img.src = URL.createObjectURL(input.files[0]);
+        img.className = 'design-logo';
+        area.appendChild(img);
+    };
+
+    input.click();
+}
+
+// Add to Cart (visual confirmation)
+function addToCustomCart(btn) {
+    const box = btn.closest('.custom-box');
+    const img = box.querySelector('.product-img').src;
+
+    const customProduct = {
+        id: Date.now(), // unique id
+        name: 'Customized Product',
+        price: 1200, // you can change price
+        image: img,
+        quantity: 1
+    };
+
+    cart.push(customProduct);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+    renderCart();
+
+    let msg = box.querySelector('.added-msg');
+    if (!msg) {
+        msg = document.createElement('div');
+        msg.className = 'added-msg';
+        msg.textContent = '✔ Added to Cart';
+        box.appendChild(msg);
+    }
+}
 
