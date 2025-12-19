@@ -87,59 +87,109 @@
   </section>
 
   
-   <!-- Customization Page -->
-  <section id="customization-page" class="customization-section">
-    <h2>Design Your Own Piece</h2>
-    <div class="customization-items">
-      <button class="custom-item-btn" onclick="selectCustomItem('shirt')">👕 Shirt</button>
-      <button class="custom-item-btn" onclick="selectCustomItem('hoodie')">🧥 Hoodie</button>
-      <button class="custom-item-btn" onclick="selectCustomItem('pant')">👖 Pant</button>
-    </div>
+  
+ <!-- Customization Section -->
+<section id="customization-page" class="customization-section hidden">
 
-    <div class="customization-container hidden" id="customizationBox">
-      <div class="customization-preview">
-        <div class="preview-item" id="previewItem">👕</div>
+  <h2>Customize Your Product</h2>
+
+  <!-- Select Type -->
+  <div class="custom-type-btns">
+    <button type="button" onclick="showCustomization('shirt')">👕 Shirt</button>
+    <button type="button" onclick="showCustomization('hoodie')">🧥 Hoodie</button>
+  </div>
+
+  <!-- SHIRT -->
+  <div id="shirt-custom" class="custom-container hidden">
+
+    <div class="custom-box">
+      <div class="design-area">
+        <img src="images/front.jfif" class="product-img">
       </div>
 
-      <div class="customization-controls">
-        <h3 id="itemTitle">Shirt</h3>
-        
-        <div class="control-group">
-          <label>Color</label>
-          <div class="color-picker">
-            <button class="color-btn" style="background-color: white; border: 2px solid #ff1493;" onclick="changeColor('white', 'Shirt')" title="White"></button>
-            <button class="color-btn" style="background-color: black;" onclick="changeColor('black', 'Black')" title="Black"></button>
-            <button class="color-btn" style="background-color: red;" onclick="changeColor('red', 'Red')" title="Red"></button>
-            <button class="color-btn" style="background-color: blue;" onclick="changeColor('blue', 'Blue')" title="Blue"></button>
-            <button class="color-btn" style="background-color: #ff69b4;" onclick="changeColor('pink', 'Pink')" title="Pink"></button>
-            <button class="color-btn" style="background-color: gray;" onclick="changeColor('gray', 'Gray')" title="Gray"></button>
-          </div>
+      <div class="custom-controls">
+        <button type="button" onclick="addText(this)">Add Text</button>
+        <button type="button" onclick="addLogo(this)">Add Logo</button>
+
+        <div class="size-options">
+          <button type="button">S</button>
+          <button type="button">M</button>
+          <button type="button">L</button>
+          <button type="button">XL</button>
         </div>
 
-        <div class="control-group">
-          <label>Size</label>
-       <button class="size-btn" onclick="changeSize('XS', event)">XS</button>
-<button class="size-btn" onclick="changeSize('S', event)">S</button>
-<button class="size-btn" onclick="changeSize('M', event)">M</button>
-<button class="size-btn" onclick="changeSize('L', event)">L</button>
-<button class="size-btn" onclick="changeSize('XL', event)">XL</button>
-<button class="size-btn" onclick="changeSize('XXL', event)">XXL</button>
-
-        </div>
-
-        <div class="control-group">
-          <label>Text (Optional)</label>
-          <input type="text" id="customText" placeholder="Add text to your item" maxlength="15" oninput="updateCustomText()">
-        </div>
-
-        <div class="custom-price">
-          <span>Price: Rs. <span id="customPrice">1999</span></span>
-        </div>
-
-        <button class="add-custom-to-cart-btn" onclick="addCustomToCart()">Add to Cart</button>
+        <button type="button" onclick="addToCustomCart(this)">Add to Cart</button>
       </div>
     </div>
-  </section>
+
+    <div class="custom-box">
+      <div class="design-area">
+        <img src="images/back.jfif" class="product-img">
+      </div>
+
+      <div class="custom-controls">
+        <button type="button" onclick="addText(this)">Add Text</button>
+        <button type="button" onclick="addLogo(this)">Add Logo</button>
+
+        <div class="size-options">
+          <button type="button">S</button>
+          <button type="button">M</button>
+          <button type="button">L</button>
+          <button type="button">XL</button>
+        </div>
+
+        <button type="button" onclick="addToCustomCart(this)">Add to Cart</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- HOODIE -->
+  <div id="hoodie-custom" class="custom-container hidden">
+
+    <div class="custom-box">
+      <div class="design-area">
+        <img src="images/hoodie front.jfif" class="product-img">
+      </div>
+
+      <div class="custom-controls">
+        <button type="button" onclick="addText(this)">Add Text</button>
+        <button type="button" onclick="addLogo(this)">Add Logo</button>
+
+        <div class="size-options">
+          <button type="button">S</button>
+          <button type="button">M</button>
+          <button type="button">L</button>
+          <button type="button">XL</button>
+        </div>
+
+        <button type="button" onclick="addToCustomCart(this)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="custom-box">
+      <div class="design-area">
+        <img src="images/hoodie back.jfif" class="product-img">
+      </div>
+
+      <div class="custom-controls">
+        <button type="button" onclick="addText(this)">Add Text</button>
+        <button type="button" onclick="addLogo(this)">Add Logo</button>
+
+        <div class="size-options">
+          <button type="button">S</button>
+          <button type="button">M</button>
+          <button type="button">L</button>
+          <button type="button">XL</button>
+        </div>
+
+        <button type="button" onclick="addToCustomCart(this)">Add to Cart</button>
+      </div>
+    </div>
+
+  </div>
+
+</section>
 
   <!-- Contact Page -->
   <section id="contact-page" class="contact-section">
